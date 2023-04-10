@@ -12,7 +12,7 @@ con.close()
 def index():
     return render_template('index.html')
 
-@app.route('/login',methods=["GET","POST"])
+@app.route('login',methods=["GET","POST"])
 def login():
     if request.method=='POST':
         name=request.form['name']
@@ -32,11 +32,11 @@ def login():
     return redirect(url_for("index"))
 
 
-@app.route('/customer',methods=["GET","POST"])
+@app.route('customer',methods=["GET","POST"])
 def customer():
     return render_template("customer.html")
 
-@app.route('/register',methods=['GET','POST'])
+@app.route('register',methods=['GET','POST'])
 def register():
     if request.method=='POST':
         try:
